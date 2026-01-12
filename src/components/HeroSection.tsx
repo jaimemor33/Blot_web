@@ -25,7 +25,7 @@ const HeroSection = () => {
       <div
         className="absolute inset-0 bg-cover bg-center transition-transform duration-[5000ms] ease-in-out group-hover:scale-110"
         style={{
-          backgroundImage: `url('https://r2.easyimg.io/3z621076j/c311415c-62b5-4569-9a8e-b9c53002440b.jpeg')`
+          backgroundImage: `url('https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2000&auto=format&fit=crop')`
         }}
       />
 
@@ -33,8 +33,8 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-[#050505] via-[#050505]/90 to-[#050505]/50"></div>
 
       {/* 3. THE CONTENT LAYER */}
-      <div className="relative z-10 h-full flex items-center">
-        <div className="container mx-auto px-6 py-16 lg:py-24 w-full">
+      <div className="relative z-10 h-full flex items-center px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto py-16 lg:py-24 w-full">
         <div className="max-w-3xl mx-auto text-center">
           {/* Badge */}
           <div className="inline-flex items-center px-4 py-2 bg-gold/10 border border-gold/30 rounded-full mb-8">
