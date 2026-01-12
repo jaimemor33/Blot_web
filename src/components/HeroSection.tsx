@@ -20,28 +20,21 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen bg-deep-black overflow-hidden pt-24">
-      {/* Premium Aesthetic Clinic Background Image with Masking */}
+    <section id="hero" className="relative h-screen w-full overflow-hidden group bg-[#050505]">
+      {/* 1. THE CHOSEN IMAGE LAYER with Cinematic Slow Zoom Animation */}
       <div
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 bg-cover bg-center transition-transform duration-[5000ms] ease-in-out group-hover:scale-110"
         style={{
-          backgroundImage: 'url("https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg")',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center right',
-          backgroundAttachment: 'fixed',
-          filter: 'grayscale(100%) brightness(25%) contrast(1.2)',
-          maskImage: 'linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 35%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,1) 100%)',
-          WebkitMaskImage: 'linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 35%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,1) 100%)',
+          backgroundImage: `url('https://r2.easyimg.io/3z621076j/c311415c-62b5-4569-9a8e-b9c53002440b.jpeg')`
         }}
       />
 
-      {/* Gold Gradient Overlay */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-b from-deep-black/40 via-deep-black/20 to-deep-black/60" />
+      {/* 2. THE DARK GRADIENT OVERLAY LAYER */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#050505] via-[#050505]/90 to-[#050505]/50"></div>
 
-      {/* Animated Background Glow */}
-      <div className="absolute top-1/2 right-1/4 w-96 h-96 bg-gold/5 rounded-full blur-3xl opacity-30 z-0"></div>
-
-      <div className="relative z-10 container mx-auto px-6 py-16 lg:py-24">
+      {/* 3. THE CONTENT LAYER */}
+      <div className="relative z-10 h-full flex items-center">
+        <div className="container mx-auto px-6 py-16 lg:py-24 w-full">
         <div className="max-w-3xl mx-auto text-center">
           {/* Badge */}
           <div className="inline-flex items-center px-4 py-2 bg-gold/10 border border-gold/30 rounded-full mb-8">
@@ -87,10 +80,7 @@ const HeroSection = () => {
             </button>
           </div>
         </div>
-
-        {/* Floating Elements */}
-        <div className="absolute top-32 right-8 w-64 h-64 bg-gold/5 rounded-full blur-2xl opacity-20 animate-pulse"></div>
-        <div className="absolute bottom-32 left-8 w-48 h-48 bg-gold/5 rounded-full blur-2xl opacity-20 animate-pulse" style={{ animationDelay: '1s' }}></div>
+        </div>
       </div>
     </section>
   );
